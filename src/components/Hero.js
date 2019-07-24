@@ -7,19 +7,19 @@ const useStyles = makeStyles(theme => ({
   root: {
     padding: theme.spacing(2),
     [theme.breakpoints.up('sm')]: {
-      padding: theme.spacing(4),
-    },
+      padding: theme.spacing(4)
+    }
   },
   img: {
-    maxWidth: '100%',
-  },
+    maxWidth: '100%'
+  }
 }))
 
 export default function Hero() {
   const { root, img } = useStyles()
 
   return (
-    <Paper className={root} square>
+    <Paper className={root}>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={4}>
           <img src={soybeans} className={img} alt="soybeans" />

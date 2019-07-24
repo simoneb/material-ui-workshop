@@ -9,24 +9,24 @@ import {
   TableRow,
   TableCell,
   makeStyles,
-  Button,
+  Button
 } from '@material-ui/core'
 import CartIcon from '@material-ui/icons/ShoppingCart'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(2)
   },
   leftIcon: {
-    marginRight: theme.spacing(1),
-  },
+    marginRight: theme.spacing(1)
+  }
 }))
 
 export default function TopChemicals() {
   const { root, leftIcon } = useStyles()
 
   return (
-    <Paper square className={root}>
+    <Paper className={root}>
       <Grid container spacing={2} alignItems="center">
         <Grid item>
           <Typography variant="h5">You Top Chemicals</Typography>

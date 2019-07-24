@@ -1,14 +1,19 @@
 export default {
   overrides: {},
+  props: {
+    MuiPaper: {
+      square: true
+    }
+  },
   typography: {
     fontFamily: "'Open Sans', sans-serif;",
     button: {
-      textTransform: 'none',
-    },
+      textTransform: 'none'
+    }
   },
   palette: {
     primary: {
-      main: '#4c9e00',
-    },
-  },
+      main: '#4c9e00'
+    }
+  }
 }
