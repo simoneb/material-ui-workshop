@@ -7,12 +7,12 @@ const useStyles = makeStyles(theme => ({
   root: {
     padding: theme.spacing(2),
     [theme.breakpoints.up('sm')]: {
-      padding: theme.spacing(4)
-    }
+      padding: theme.spacing(4),
+    },
   },
   img: {
-    maxWidth: '100%'
-  }
+    maxWidth: '100%',
+  },
 }))
 
 export default function Hero() {
