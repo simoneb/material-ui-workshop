@@ -1,8 +1,7 @@
 import React from 'react'
 import { makeStyles, withStyles } from '@material-ui/styles'
-import { Typography, Button, Grid } from '@material-ui/core'
+import { Typography, Button, Grid, Container } from '@material-ui/core'
 
-import { PaddedContainer } from './PaddedContainer'
 import sky from '../assets/sky.jpg'
 import Hero from './Hero'
 import TopChemicals from './TopChemicals'
@@ -10,7 +9,10 @@ import TopChemicals from './TopChemicals'
 const useStyles = makeStyles(theme => ({
   root: {
     flex: 1,
-    marginTop: theme.spacing(8),
+    marginTop: theme.spacing(7),
+    [theme.breakpoints.up('sm')]: {
+      marginTop: theme.spacing(8),
+    },
     paddingTop: theme.spacing(5),
     backgroundImage: `url(${sky})`,
     backgroundRepeat: 'no-repeat',
@@ -23,7 +25,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const WhiteBackgroundButton = withStyles(theme => ({
+const MainButton = withStyles(theme => ({
   root: {
     background: 'white',
     '&:hover': {
@@ -37,26 +39,26 @@ export default function Main() {
 
   return (
     <main className={root}>
-      <PaddedContainer>
-        <Typography variant="h3" gutterBottom className={title}>
+      <Container maxWidth="md">
+        <Typography variant="h3" gutterBottom className={title} noWrap>
           Welcome, Trevor Glaser
         </Typography>
         <Grid container direction="column" spacing={2}>
           <Grid item container spacing={2} justify="flex-end">
             <Grid item>
-              <WhiteBackgroundButton variant="outlined" color="primary">
+              <MainButton variant="outlined" color="primary">
                 Weather Story
-              </WhiteBackgroundButton>
+              </MainButton>
             </Grid>
             <Grid item>
-              <WhiteBackgroundButton variant="outlined" color="primary">
+              <MainButton variant="outlined" color="primary">
                 Local Weather
-              </WhiteBackgroundButton>
+              </MainButton>
             </Grid>
             <Grid item>
-              <WhiteBackgroundButton variant="outlined" color="primary">
+              <MainButton variant="outlined" color="primary">
                 Markets
-              </WhiteBackgroundButton>
+              </MainButton>
             </Grid>
           </Grid>
           <Grid item>
@@ -66,7 +68,7 @@ export default function Main() {
             <TopChemicals />
           </Grid>
         </Grid>
-      </PaddedContainer>
+      </Container>
     </main>
   )
 }

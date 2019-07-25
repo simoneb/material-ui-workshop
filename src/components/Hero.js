@@ -1,5 +1,12 @@
 import React from 'react'
-import { Paper, makeStyles, Grid, Typography, Button } from '@material-ui/core'
+import {
+  Paper,
+  makeStyles,
+  Grid,
+  Typography,
+  Button,
+  Box,
+} from '@material-ui/core'
 
 import soybeans from '../assets/soybeans.jpg'
 
@@ -37,14 +44,14 @@ export default function Hero() {
             </Typography>
           </Grid>
           <Grid item>
-            <Typography variant="h6" gutterBottom>
-              Convenient. Easy. Customized.
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Button fullWidth color="primary" variant="contained">
-              Shop Now
-            </Button>
+            <Box display="inline-block" mt={4}>
+              <Typography variant="h6" gutterBottom>
+                Convenient. Easy. Customized.
+              </Typography>
+              <Button fullWidth color="primary" variant="contained">
+                Shop Now
+              </Button>
+            </Box>
           </Grid>
         </Grid>
       </Grid>
