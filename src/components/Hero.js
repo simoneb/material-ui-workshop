@@ -10,23 +10,17 @@ import {
 
 import soybeans from '../assets/soybeans.jpg'
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    padding: theme.spacing(2),
-    [theme.breakpoints.up('sm')]: {
-      padding: theme.spacing(4),
-    },
-  },
+const useStyles = makeStyles({
   img: {
     maxWidth: '100%',
   },
-}))
+})
 
 export default function Hero() {
-  const { root, img } = useStyles()
+  const { img } = useStyles()
 
   return (
-    <Paper className={root}>
+    <Paper component={Box} padding={{ xs: 1, sm: 2 }}>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={4}>
           <img src={soybeans} className={img} alt="soybeans" />
